@@ -1,0 +1,352 @@
+/*
+  Program name: style.css
+  Author: Muhammad Ashar
+  Date created: 03/26/2026
+  Date last edited: 03/28/2026
+  Version: 2.0
+  Description: Styling for We'R'Docs Medical patient registration form.
+               Homework 2 version — adds review panel, validation message styles,
+               slider value display, and general polish.
+*/
+
+/* ===== BODY ===== */
+body {
+    background-color: #e6f2ff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== HEADER ===== */
+#header {
+    background-color: #003366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+#logo {
+    height: 60px;
+}
+
+#date {
+    font-size: 14px;
+}
+
+/* ===== MAIN SECTION ===== */
+#main {
+    padding: 30px 40px;
+    text-align: center;
+}
+
+h2 {
+    color: #003366;
+    margin-bottom: 5px;
+}
+
+.required-note {
+    font-size: 13px;
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* ===== REQUIRED ASTERISK ===== */
+.req {
+    color: #cc0000;
+    font-weight: bold;
+}
+
+/* ===== FORM TABLE ===== */
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 8px 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.label-cell {
+    font-weight: bold;
+    color: #003366;
+    white-space: nowrap;
+    padding-top: 10px;
+}
+
+/* ===== INPUTS ===== */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    border: 1px solid #aac4e0;
+    border-radius: 4px;
+    padding: 5px 8px;
+    font-size: 14px;
+    background-color: #ffffff;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #003366;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 51, 102, 0.3);
+}
+
+/* Browser native validation styling */
+input:invalid {
+    border-color: #cc4444;
+}
+
+input:valid {
+    border-color: #aac4e0;
+}
+
+/* ===== FIELD MESSAGE SPANS (inline validation feedback) ===== */
+.field-msg {
+    display: block;
+    font-size: 12px;
+    margin-top: 3px;
+    min-height: 16px;
+}
+
+.error-msg {
+    color: #cc0000;
+}
+
+.success-msg {
+    color: #007700;
+}
+
+/* ===== SLIDER DISPLAY ===== */
+.slider-value {
+    display: inline-block;
+    background-color: #003366;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    width: 30px;
+    text-align: center;
+    border-radius: 4px;
+    padding: 2px 4px;
+    margin-left: 8px;
+}
+
+.slider-labels {
+    font-size: 12px;
+    color: #555;
+}
+
+/* ===== BUTTONS ===== */
+input[type="reset"],
+input[type="submit"],
+button {
+    padding: 9px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+input[type="reset"] {
+    background-color: #ccc;
+    color: #333;
+}
+
+input[type="reset"]:hover {
+    background-color: #bbb;
+}
+
+input[type="submit"] {
+    background-color: #003366;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #00224d;
+}
+
+#review_btn {
+    background-color: #ffcc00;
+    color: #003366;
+    border: none;
+}
+
+#review_btn:hover {
+    background-color: #e6b800;
+}
+
+/* ===== REVIEW PANEL ===== */
+#review_section {
+    margin: 40px auto;
+    max-width: 900px;
+    background-color: #ffffff;
+    border: 2px solid #003366;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+#review_section h3 {
+    text-align: center;
+    color: #003366;
+    font-size: 20px;
+    margin-top: 0;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Review table inside the panel */
+.review-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.review-table thead tr {
+    background-color: #003366;
+    color: white;
+}
+
+.review-table thead th {
+    padding: 10px 14px;
+    text-align: left;
+}
+
+.review-table tbody tr {
+    border-bottom: 1px solid #dde8f4;
+}
+
+.review-table tbody tr:nth-child(even) {
+    background-color: #f0f7ff;
+}
+
+.review-label {
+    font-weight: bold;
+    color: #003366;
+    padding: 9px 14px;
+    width: 220px;
+    white-space: nowrap;
+}
+
+.review-value {
+    padding: 9px 14px;
+    color: #333;
+    word-break: break-word;
+}
+
+/* Pass / Fail indicators */
+.review-pass {
+    color: #007700;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.review-fail {
+    color: #cc0000;
+    font-weight: bold;
+}
+
+/* Summary messages */
+.review-all-pass {
+    margin-top: 18px;
+    text-align: center;
+    color: #007700;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #eaffea;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #aaddaa;
+}
+
+.review-has-errors {
+    margin-top: 18px;
+    text-align: center;
+    color: #cc0000;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #fff0f0;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ffaaaa;
+}
+
+/* ===== FOOTER ===== */
+#footer {
+    background-color: #003366;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    margin-top: 40px;
+}
+
+#footer p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+#footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+
+#footer button {
+    background-color: #ffcc00;
+    color: #003366;
+}
+
+#footer button:hover {
+    background-color: #e6b800;
+}
+
+/* ===== RESPONSIVE TOUCH ===== */
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    #footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    table, tbody, tr, td {
+        display: block;
+        width: 100%;
+    }
+
+    .review-label {
+        width: auto;
+    }
+}
+
+/* End of style.css */
